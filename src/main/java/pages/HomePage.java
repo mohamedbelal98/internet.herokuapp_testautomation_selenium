@@ -9,6 +9,8 @@ public class HomePage {
     private final By abTestingLink = By.linkText("A/B Testing");
     private final By addRemoveLink = By.linkText("Add/Remove Elements");
     private final By brokenImageLink = By.linkText("Broken Images");
+    private final By checkBoxLink = By.linkText("Checkboxes");
+    private final By contextMenuLink = By.linkText("Context Menu");
 
     //constructor
     public HomePage(WebDriver driver) {
@@ -32,6 +34,18 @@ public class HomePage {
 
         driver.findElement(brokenImageLink).click();
         return new BrokenImagePage(driver);
+    }
+
+    public CheckBoxPage clickCheckBoxLink() {
+
+        driver.findElement(checkBoxLink).click();
+        return new CheckBoxPage(driver);
+    }
+
+    public ContextMenuPage clickContextMenuLink() {
+
+        driver.findElement(contextMenuLink).click();
+        return new ContextMenuPage(driver);
     }
 
 }
