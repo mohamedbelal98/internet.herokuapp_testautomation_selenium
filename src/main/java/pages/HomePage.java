@@ -13,6 +13,7 @@ public class HomePage {
     private final By contextMenuLink = By.linkText("Context Menu");
     private final By dragAndDropLink = By.linkText("Drag and Drop");
     private final By dropDropMenuLink = By.linkText("Dropdown");
+    private final By dynamicControlsLink = By.linkText("Dynamic Controls");
 
     //constructor
     public HomePage(WebDriver driver) {
@@ -60,6 +61,12 @@ public class HomePage {
 
         driver.findElement(dropDropMenuLink).click();
         return new DropDownMenuPage(driver);
+    }
+
+    public DynamicControlsPage clickDynamicControlsLink() {
+
+        driver.findElement(dynamicControlsLink).click();
+        return new DynamicControlsPage(driver);
     }
 
 }

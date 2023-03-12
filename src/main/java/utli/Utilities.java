@@ -32,6 +32,12 @@ public class Utilities {
         webDriverWait.until(ExpectedConditions.textToBePresentInElement(element, text));
     }
 
+    public static void waitStrategyToBeClickable(WebDriver driver, WebElement element, int timeInSeconds) {
+
+        WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(timeInSeconds));
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
     public static void javaScriptExecutor(WebDriver driver, WebElement webElement, String script) {
 
         //String script = "arguments[0].scrollIntoView();";
