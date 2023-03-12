@@ -11,6 +11,8 @@ public class HomePage {
     private final By brokenImageLink = By.linkText("Broken Images");
     private final By checkBoxLink = By.linkText("Checkboxes");
     private final By contextMenuLink = By.linkText("Context Menu");
+    private final By dragAndDropLink = By.linkText("Drag and Drop");
+    private final By dropDropMenuLink = By.linkText("Dropdown");
 
     //constructor
     public HomePage(WebDriver driver) {
@@ -46,6 +48,18 @@ public class HomePage {
 
         driver.findElement(contextMenuLink).click();
         return new ContextMenuPage(driver);
+    }
+
+    public DragAndDropPage clickDragAndDropLink() {
+
+        driver.findElement(dragAndDropLink).click();
+        return new DragAndDropPage(driver);
+    }
+
+    public DropDownMenuPage clickDropDownMenuLink() {
+
+        driver.findElement(dropDropMenuLink).click();
+        return new DropDownMenuPage(driver);
     }
 
 }
