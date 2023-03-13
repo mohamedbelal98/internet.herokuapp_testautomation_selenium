@@ -18,6 +18,8 @@ public class HomePage {
     private final By dynamicControlsLink = By.linkText("Dynamic Controls");
     private final By dynamicLoadingLink = By.linkText("Dynamic Loading");
     private final By uploadFileLink = By.linkText("File Upload");
+    private final By fromAuthentication = By.linkText("Form Authentication");
+    private final By horizontalSliderLink = By.linkText("Horizontal Slider");
 
     //constructor
     public HomePage(WebDriver driver) {
@@ -83,6 +85,18 @@ public class HomePage {
 
         driver.findElement(uploadFileLink).click();
         return new UploadFilePage(driver);
+    }
+
+    public LoginPage clickFromAuthenticationLink() {
+
+        driver.findElement(fromAuthentication).click();
+        return new LoginPage(driver);
+    }
+
+    public HorizontalSliderPage clickHorizontalSliderLink() {
+
+        driver.findElement(horizontalSliderLink).click();
+        return new HorizontalSliderPage(driver);
     }
 
 }
