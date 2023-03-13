@@ -17,6 +17,7 @@ public class TestAddRemoveElement extends BaseTest {
 
         addRemoveElementPage.clickAddButton();
         addRemoveElementPage.delete();
+
     }
 
     @Test
@@ -26,11 +27,13 @@ public class TestAddRemoveElement extends BaseTest {
 
         assertEquals(addRemoveElementPage.getTitleText(), addRemoveElementPage.titleText, "Error on add and remove element page");
 
-        int numberOfAddButton = 5;
+        int numberOfAddButton = 10;
         for (int i = 0; i < numberOfAddButton; i++) {
             addRemoveElementPage.clickAddButton();
         }
 
         addRemoveElementPage.delete();
+
     }
+
 }
