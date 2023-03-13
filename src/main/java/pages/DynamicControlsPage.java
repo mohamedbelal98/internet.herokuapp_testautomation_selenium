@@ -11,6 +11,8 @@ import java.util.Objects;
 public class DynamicControlsPage {
 
     private final WebDriver driver;
+
+    //Locator
     private final By inputButton = By.xpath("//form[@id='input-example']/child::button");
     private final By inputField = By.xpath("//form[@id='input-example']/child::input");
     private final By messageText = By.xpath("//p[@id='message']");
@@ -20,10 +22,12 @@ public class DynamicControlsPage {
 
     public final String disableMessage = "It's disabled!";
 
+    //constructor
     public DynamicControlsPage(WebDriver driver) {
         this.driver = driver;
     }
 
+    //Methods
     public void dynamicControlInputField() {
 
         WebElement inputFieldElement = driver.findElement(inputField);

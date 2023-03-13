@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 public class HomePage {
 
     private final WebDriver driver;
+
+    //Locator
     private final By abTestingLink = By.linkText("A/B Testing");
     private final By addRemoveLink = By.linkText("Add/Remove Elements");
     private final By brokenImageLink = By.linkText("Broken Images");
@@ -14,6 +16,8 @@ public class HomePage {
     private final By dragAndDropLink = By.linkText("Drag and Drop");
     private final By dropDropMenuLink = By.linkText("Dropdown");
     private final By dynamicControlsLink = By.linkText("Dynamic Controls");
+    private final By dynamicLoadingLink = By.linkText("Dynamic Loading");
+    private final By uploadFileLink = By.linkText("File Upload");
 
     //constructor
     public HomePage(WebDriver driver) {
@@ -67,6 +71,18 @@ public class HomePage {
 
         driver.findElement(dynamicControlsLink).click();
         return new DynamicControlsPage(driver);
+    }
+
+    public DynamicLoadingPage clickDynamicLoadingLink() {
+
+        driver.findElement(dynamicLoadingLink).click();
+        return new DynamicLoadingPage(driver);
+    }
+
+    public UploadFilePage clickUploadFileLink() {
+
+        driver.findElement(uploadFileLink).click();
+        return new UploadFilePage(driver);
     }
 
 }
