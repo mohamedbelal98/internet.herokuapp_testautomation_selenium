@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
-import java.util.Objects;
 
 public class HorizontalSliderPage {
 
@@ -17,6 +16,7 @@ public class HorizontalSliderPage {
     }
 
     public String getNumber() {
+
         return driver.findElement(number).getText();
     }
 

@@ -20,6 +20,8 @@ public class HomePage {
     private final By uploadFileLink = By.linkText("File Upload");
     private final By fromAuthentication = By.linkText("Form Authentication");
     private final By horizontalSliderLink = By.linkText("Horizontal Slider");
+    private final By hoversLink = By.linkText("Hovers");
+    private final By javascriptAlertLink = By.linkText("JavaScript Alerts");
 
     //constructor
     public HomePage(WebDriver driver) {
@@ -97,6 +99,18 @@ public class HomePage {
 
         driver.findElement(horizontalSliderLink).click();
         return new HorizontalSliderPage(driver);
+    }
+
+    public HoversPage clickHoversLink() {
+
+        driver.findElement(hoversLink).click();
+        return new HoversPage(driver);
+    }
+
+    public JavaScriptAlertsPage clickJavaScriptAlertsLink() {
+
+        driver.findElement(javascriptAlertLink).click();
+        return new JavaScriptAlertsPage(driver);
     }
 
 }
