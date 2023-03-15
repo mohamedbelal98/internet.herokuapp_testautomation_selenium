@@ -10,15 +10,20 @@ import java.util.List;
 public class CheckBoxPage {
 
     private final WebDriver driver;
+
+    //Locator
     private final By titleTextLocator = By.xpath("//div[@class='example']/child::h3");
     private final By listOfCheckBox = By.xpath("//*[@id='checkboxes']/child::input");
 
+    //Variables for assertion
     public final String titleText = "Checkboxes";
 
+    //constructor
     public CheckBoxPage(WebDriver driver) {
         this.driver = driver;
     }
 
+    //Methods
     public String getTitleText() {
 
         return driver

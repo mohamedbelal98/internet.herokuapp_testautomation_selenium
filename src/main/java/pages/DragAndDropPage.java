@@ -9,11 +9,12 @@ import org.openqa.selenium.interactions.Actions;
 public class DragAndDropPage {
 
     private final WebDriver driver;
+
+    //Locator
     private final By elementALocator = By.id("column-a");
     private final By elementBLocator = By.id("column-b");
-    private final By firstElementHeader = By.xpath("//*[@id='column-a']/header");
 
-
+    //constructor
     public DragAndDropPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -22,7 +23,6 @@ public class DragAndDropPage {
 
         WebElement elementA = driver.findElement(elementALocator);
         WebElement elementB = driver.findElement(elementBLocator);
-
 
         Actions actions = new Actions(driver);
         actions.dragAndDrop(elementB, elementA).perform();

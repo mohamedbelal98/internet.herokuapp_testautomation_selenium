@@ -6,15 +6,19 @@ import org.openqa.selenium.WebDriver;
 public class LoginPage {
 
     private final WebDriver driver;
+
+    //Locators
     private final By userNameInput = By.id("username");
     private final By passwordInput = By.id("password");
     private final By loginButton = By.className("radius");
     private final By flashMessage = By.xpath("//div[@class='flash success']");
 
+    //constructor
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
 
+    //Methods
     public SecureAreaPage login(String userName, String password) {
 
         driver.findElement(userNameInput).sendKeys(userName);

@@ -6,15 +6,19 @@ import org.openqa.selenium.WebDriver;
 public class JavaScriptAlertsPage {
 
     private final WebDriver driver;
+
+    //Locators
     private final By result = By.id("result");
     private final By alertButton = By.xpath("//button[text()='Click for JS Alert']");
     private final By confirmButton = By.xpath("//button[text()='Click for JS Confirm']");
     private final By promptButton = By.xpath("//button[text()='Click for JS Prompt']");
 
+    //constructor
     public JavaScriptAlertsPage(WebDriver driver) {
         this.driver = driver;
     }
 
+    //Methods
     public String getResultText() {
 
         return driver.findElement(result).getText();

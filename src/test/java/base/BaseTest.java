@@ -31,6 +31,7 @@ public class BaseTest {
         options.addArguments("--remote-allow-origins=*");
 
         driver = new ChromeDriver(options);
+        driver.manage().window().maximize();
         driver.get("https://the-internet.herokuapp.com/");
         goHome();
 
@@ -43,11 +44,11 @@ public class BaseTest {
         driver.get("https://the-internet.herokuapp.com/");
     }
 
-    @AfterClass
-    public void tearDown() {
-
-        driver.quit();
-    }
+//    @AfterClass
+//    public void tearDown() {
+//
+//        driver.quit();
+//    }
 
     @AfterMethod
     public void failed_screenShot(ITestResult iTestResult) throws IOException {

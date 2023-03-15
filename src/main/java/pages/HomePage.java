@@ -22,6 +22,7 @@ public class HomePage {
     private final By horizontalSliderLink = By.linkText("Horizontal Slider");
     private final By hoversLink = By.linkText("Hovers");
     private final By javascriptAlertLink = By.linkText("JavaScript Alerts");
+    private final By largeAndDeepDOMLink = By.linkText("Large & Deep DOM");
 
     //constructor
     public HomePage(WebDriver driver) {
@@ -111,6 +112,12 @@ public class HomePage {
 
         driver.findElement(javascriptAlertLink).click();
         return new JavaScriptAlertsPage(driver);
+    }
+
+    public LargeAndDeepDOMPage clickLargeAndDeepDOMLink() {
+
+        driver.findElement(largeAndDeepDOMLink).click();
+        return new LargeAndDeepDOMPage(driver);
     }
 
 }

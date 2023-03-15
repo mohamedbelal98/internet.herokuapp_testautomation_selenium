@@ -9,23 +9,23 @@ import static org.testng.Assert.assertEquals;
 public class TestPromptAlert extends BaseTest {
 
     @Test
-    public void testPromptConfirm(){
+    public void testPromptConfirm() {
 
         JavaScriptAlertsPage javaScriptAlertsPage = homePage.clickJavaScriptAlertsLink();
 
         javaScriptAlertsPage.confirmPromptAlert("test");
 
-        assertEquals(javaScriptAlertsPage.getResultText(),"You entered: test");
+        assertEquals(javaScriptAlertsPage.getResultText(), "You entered: test");
     }
 
     @Test
-    public void testPromptDismiss(){
+    public void testPromptDismiss() {
 
         JavaScriptAlertsPage javaScriptAlertsPage = homePage.clickJavaScriptAlertsLink();
 
         javaScriptAlertsPage.dismissPromptAlert("test");
 
-        assertEquals(javaScriptAlertsPage.getResultText(),"You entered: null");
+        assertEquals(javaScriptAlertsPage.getResultText(), "You entered: null");
 
     }
 }

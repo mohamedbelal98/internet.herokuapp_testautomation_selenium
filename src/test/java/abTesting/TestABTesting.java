@@ -13,7 +13,7 @@ public class TestABTesting extends BaseTest {
 
         ABPage abPage = homePage.clickABLink();
         assertEquals(abPage.getTitleText(), abPage.titleTextForAssertion, "Error on ABTesting page");
-        assertEquals(abPage.getBodyText(),abPage.bodyTextForAssertion,"Error on ABTesting page");
+        assertEquals(abPage.getBodyText(), abPage.bodyTextForAssertion, "Error on ABTesting page");
     }
 
 }

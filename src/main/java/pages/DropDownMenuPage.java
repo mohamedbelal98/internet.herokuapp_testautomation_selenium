@@ -10,12 +10,16 @@ import java.util.List;
 public class DropDownMenuPage {
 
     private final WebDriver driver;
+
+    //Locator
     private final By dropDownMenuLocator = By.id("dropdown");
 
+    //constructor
     public DropDownMenuPage(WebDriver driver) {
         this.driver = driver;
     }
 
+    //Methods
     public Select findDropDownMenu() {
 
         return new Select(driver.findElement(dropDownMenuLocator));

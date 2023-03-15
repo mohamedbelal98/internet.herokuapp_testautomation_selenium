@@ -20,7 +20,7 @@ public class BrokenImagePage {
 
         List<WebElement> elementList = driver.findElements(listOfImage);
 
-        Utilities.filterImageBroken(driver,elementList);
+        Utilities.filterImageBroken(driver, elementList);
 
     }
 }

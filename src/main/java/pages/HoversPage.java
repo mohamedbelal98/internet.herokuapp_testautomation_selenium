@@ -11,20 +11,22 @@ import java.util.List;
 public class HoversPage {
 
     private final WebDriver driver;
+
+    //locator
     private final By listOfImage = By.className("figure");
     private final By textOfImage = By.xpath("//div[@class='figcaption']/child::h5");
 
+    //constructor
     public HoversPage(WebDriver driver) {
         this.driver = driver;
     }
 
+    //Methods
     public void hoverOverImages() {
 
         List<WebElement> listOfImageElement = driver.findElements(listOfImage);
 
-
         Actions actions = new Actions(driver);
-
 
         for (WebElement webElement : listOfImageElement) {
 

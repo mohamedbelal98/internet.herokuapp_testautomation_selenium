@@ -7,7 +7,7 @@ import pages.DynamicControlsPage;
 public class TestCheckBox extends BaseTest {
 
     @Test
-    public void testCheckBox(){
+    public void testCheckBox() {
 
         DynamicControlsPage dynamicControlsPage = homePage.clickDynamicControlsLink();
 
